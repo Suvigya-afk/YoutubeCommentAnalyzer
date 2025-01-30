@@ -1,15 +1,16 @@
-Issue 1--> While creating virtual enviroment in windows we might face error with the usual process of creating directory -> running
-command -> (python -m venv env) and then command (env/Scripts/activate.bat).
-Solution--> To resolve above issue run below two command in order:
-cmd 1: (Set-ExecutionPolicy RemoteSigned)
-cmd 2: env/Scripts/activate
+Project: YouTube Sentiment Analysis Tool
 
-Issue 2--> `django-admin startproject backend` -> this command creates a new project called 'backend'
+Overview:
+In response to YouTube's removal of visible dislike counts on videos, which can obscure viewers' ability to gauge a video's reception, I developed a web tool to provide insights into the popularity of YouTube videos and playlists through sentiment analysis of viewer comments.
 
-Issue 3--> `python manage.py startapp api` -> this command creates a new app called 'api' inside the directory.
+Solution:
+I created a web application using Django and React that analyzes the sentiment of comments on YouTube videos and playlists. The process works as follows:
 
-Issue 4--> `pip install -r requirements.txt` -> this command installs all the packages mentioned inside the 'requirements.txt' file.
-
-Issue 5--> The 'author' field in api/models.py is used to link the 'User' model and the 'Comments' model. If any particular user gets
-deleted then all the relat ed commnets will be deleted (This will be useful for us when we want to empty out the database). Also the
-'related_name' field helps to list out all the comments related to a User.
+Data Collection:
+Users can input the URL of a video or playlist. Utilizing the Google API client, the tool retrieves comments associated with the specified content.
+Data Processing:
+The collected comments are stored in a CSS file for further analysis. A separate process extracts each comment and performs sentiment analysis, calculating positive and negative sentiment scores.
+Visualization:
+The sentiment scores are displayed on-screen using a pie chart, allowing users to easily interpret the overall sentiment of the comments.
+Impact:
+This tool helps viewers gain valuable insights into the general sentiment surrounding a video or playlist, offering a clearer understanding of its reception beyond traditional like/dislike metrics. By presenting positive and negative sentiment scores in a visually engaging pie chart format, users can make more informed decisions about which content to engage with, thereby enhancing their viewing experience. Furthermore, it provides content creators with actionable feedback on audience reactions, which can inform future video production and engagement strategies.
