@@ -14,3 +14,22 @@ Visualization:
 The sentiment scores are displayed on-screen using a pie chart, allowing users to easily interpret the overall sentiment of the comments.
 Impact:
 This tool helps viewers gain valuable insights into the general sentiment surrounding a video or playlist, offering a clearer understanding of its reception beyond traditional like/dislike metrics. By presenting positive and negative sentiment scores in a visually engaging pie chart format, users can make more informed decisions about which content to engage with, thereby enhancing their viewing experience. Furthermore, it provides content creators with actionable feedback on audience reactions, which can inform future video production and engagement strategies.
+
+Tools/Techs Used:
+Backend: Django, JWT Authentication, NLTK, Sentiment Analysis
+Frontend: ReactJS, Axios, Charts
+
+Current Challenges:
+Since the api call to the google client only fetches a limited number of comments at time, a more persistent approach of storing 
+comments with a DB would help.
+Future Objectives:
+Enable feature for shorts as well.
+
+Install below:
+Have to install nltk, use the settings.py file.
+Run the requirements.txt file for backend.
+Install vite for frontend.
+
+Run below to start the project:
+To run backend, go to the main backend dir and run command "python3 manage.py runserver".
+To run the frontend, open terminal in src, and run command "npm run dev".
